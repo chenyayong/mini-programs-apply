@@ -1,0 +1,66 @@
+<template>
+	<view class="app column"><rich-text :nodes="data.html"></rich-text></view>
+</template>
+
+<script>
+import jyfParser from '@/components/jyf-parser/jyf-parser.vue';
+export default {
+	components: {
+		jyfParser
+	},
+	data() {
+		return {
+			data: {
+				article: `<p>&nbsp; &nbsp; 辈美科技（以下简称&ldquo;本网&rdquo;），根据相关法律、法规进行购买本公司产品及各种增值服务业务。依照本协议以下条款本网登记注册的会员（以下简称&ldquo;用户&rdquo;），并同意以下服务条款，方有资格享受本网提供的响应服务，并受本协议条款的约束。</p>\n<p>&nbsp;</p>\n<p>&nbsp;&nbsp;&nbsp;1.本网提供的服务内容可能包括：文字、软件、图片、录像等。所有内容受版权、商标及其他财产所有权法律的保护。</p>\n<p>&nbsp;&nbsp;&nbsp;2.用户只有在获得本网或其他相关权利人的授权之后才能使用这些内容，而不能擅自复制、再造这些内容、或创造与内容有关的派生产品。</p>\n<p>&nbsp; &nbsp;3.为保障用户的合法权益，避免在服务时因用户注册资料与真实情况不符而发生纠纷，请用户注册是务必按照真实、全面、准确的原则填写。对因用户自身原因而造成的不能服务情况，本网概不负责。如果用户提供的资料包含有不正确的信息，本网保留结束用户使用服务资格的权利。</p>\n<p>&nbsp; &nbsp;4.保护用户隐私是本网的一项基本政策，本网保证不对外公开或向第三方提供用户注册资料及用户在使用网络服务时存储在本网的非公开内容，但系列情况除外：</p>\n<p>&nbsp;&nbsp; &nbsp; &nbsp;① 事先获得用户的明确授权。</p>\n<p>&nbsp;&nbsp; &nbsp; &nbsp;② 根据有关的法律法规要求。</p>\n<p>&nbsp;&nbsp; &nbsp; &nbsp;③ 按照相关政府主管部门的要求。</p>\n<p>&nbsp;&nbsp; &nbsp; &nbsp;④ 为维护社会公众的利益。</p>\n<p>&nbsp;&nbsp; &nbsp; &nbsp;⑤ 为维护本网的合法权益。</p>\n<p>&nbsp;</p>\n<p>&nbsp; &nbsp;5.在不透漏单个用户隐私资料的前提下，本网有权对整个用户数据库进行分析并对用户数据库进行商业上的利用。</p>\n<p>&nbsp; &nbsp;6.用户有权随时对自己的个人资料进行查询、修改和删除。为客户服务安全考虑，帐号不能随意更改。</p>\n<p>&nbsp; &nbsp;7.用户享有在本网所购买的各种服务内容。</p>\n<p>&nbsp; &nbsp;8.本网在提供网络服务室，可能会对部分网络服务的用户收取一定的费用，在此情况下，本网会在相关页面上做明确的提示。如用户拒绝支付该等费用，则不能使用相关服务。</p>\n<p>&nbsp; &nbsp;9.用户理解，本网仅提供相关的网络服务，除此之外与相关网络服务有关的设备（如电脑、调制解调器及其他与接入互联网有关的装置）及所需的费用（如为接入互联网而支付的电话费及上网费）均应由用户自行负担。</p>`,
+				article2: `<p>&nbsp; &nbsp;除非另外声明，平台内的所有产品、软件、程序、技术、数据及其他信息（包括但不限于文字、图像、照片、图片、视频、音频、版面设计、电子文档）的所有权利（包括但不限于版权、商标权、专利权、商业秘密等知识产权及其他所有相关权利）均归属本平台或关联公司所有。未经许可，任何人不得擅自使用。</p>\n<p>&nbsp; &nbsp;我们非常尊重用户个人信息的保护，在您使用平台提供的服务时，我们将按照本隐私权政策收集、使用、共享和保护您的个人信息。</p>\n<p>&nbsp; &nbsp;1.我们如何收集信息</p>\n<p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;① 当您注册账户及您再使用平台时提供的相关服务时填写及提交的信息，包括您的姓名、性别、出生年与日、身份证号码、护照姓名、电话号码、地址、银行账号以及相关附加信息。</p>\n<p>&nbsp;&nbsp; &nbsp; &nbsp;② 为了提供并优化您需要的服务，我们会收集您使用服务的相关信息。包括您再平台进行交易的有关数据（包括但不限于出价、成交信息、评价等数据）、您再使用平台提供的搜索服务时输入的关键字信息等。</p>\n<p>&nbsp; &nbsp;2.我们如何使用信息</p>\n<p>&nbsp;&nbsp; &nbsp; &nbsp;① 想您提供您使用的各项服务，并维护、改进这些服务。</p>\n<p>&nbsp;&nbsp; &nbsp; &nbsp;② 向您推荐您可能感兴趣的内容，包括但不限于通过系统向您展示个性化的推广信息，或者在征得您同意的情况下与合作伙伴共享信息以便他们向您发送有关其产品和服务的信息。如您不希望接收上述信息，可通过相应的退订功能进行退订。</p>\n<p>&nbsp;&nbsp; &nbsp; &nbsp;③ 我们可能使用您的个人信息以预防、发现、调查欺诈、危害安全、非法或违反与我们或其关联方协议、政策或规则的行为，以保护您或其他用户的合法权益。</p>`,
+				html: ``
+			}
+		};
+	},
+	async onLoad(options) {
+		const param = JSON.parse(options.param);
+		this.loadData(param);
+	},
+	methods: {
+		async loadData(param) {
+			if (param.data.type == 1) {
+				this.data.html = this.data.article;
+				uni.setNavigationBarTitle({
+					title: '用户服务协议'
+				});
+			} else {
+				this.data.html = this.data.article2;
+				uni.setNavigationBarTitle({
+					title: '隐私权政策'
+				});
+			}
+			// 	const {module, operation, data} = param;
+			// 	const res = await this.$request(module, operation, data, {
+			// 		showLoading: true
+			// 	})
+			// 	if(res.status === 0){
+			// 		this.$util.msg(res.msg || '获取失败');
+			// 		setTimeout(()=>{
+			// 			uni.navigateBack();
+			// 		}, 1000)
+			// 	}
+			// 	uni.setNavigationBarTitle({
+			// 		title: res.data.name
+			// 	})
+			// 	this.data = {
+			// 		...res.data,
+			// 		content: res.data.content.replace(/\<img/gi, '<img style="width:100%;height:auto;max-width:750rpx;border-radius: 6rpx"')
+			// 	}
+		}
+	}
+};
+</script>
+
+<style scoped lang="scss">
+.app {
+	padding: 10rpx 30rpx 30rpx;
+	font-size: 30rpx;
+	color: #333;
+	line-height: 46rpx;
+}
+</style>

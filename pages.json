@@ -1,0 +1,102 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+            "path" : "pages/tabbar/home",
+            "style" : {
+			}
+        }
+		,{
+		    "path" : "pages/tabbar/logs",
+		    "style" : {
+				"navigationBarTitleText": "申请记录"
+			}
+		}
+		,{
+		    "path" : "pages/tabbar/user",
+		    "style" : {
+				"navigationBarTitleText": "我的",
+				"navigationStyle":"custom"
+			}
+		}
+		,{
+			"path": "pages/auth/login",
+			"style": {
+				"navigationBarTitleText": "登录",
+				"navigationStyle":"custom",
+				"app-plus": {
+					"animationType": "slide-in-bottom"
+				}
+			}
+		}
+		,{
+		    "path" : "pages/auth/register",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "注册"
+		    }
+		}
+       
+		,{
+		    "path" : "pages/auth/bindMobile",
+		    "style" : {
+				"navigationBarTitleText": "绑定手机号码"
+			}
+		}
+		,{
+		    "path" : "pages/set/set",
+		    "style" : {
+				"navigationBarTitleText": "设置"
+			}
+		}
+		,{
+		    "path" : "pages/set/about",
+		    "style" : {
+				"navigationBarTitleText": "关于"
+			}
+		}
+		,{
+			"path": "pages/public/article",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		}
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "辈美科技",
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"backgroundColor": "#f8f8f8",
+		"pageOrientation": "portrait",
+		"app-plus": {
+			"pullToRefresh": {
+				"style":"circle",
+				"color":"#ff536f"
+			}
+		}
+	},
+	"tabBar": {
+		"color": "#C0C4CC",
+		"selectedColor": "#ff536f",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [{
+				"pagePath": "pages/tabbar/home",
+				"iconPath": "static/tabbar/tab-home.png",
+				"selectedIconPath": "static/tabbar/tab-home-current.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/tabbar/logs",
+				"iconPath": "static/tabbar/tab-cate.png",
+				"selectedIconPath": "static/tabbar/tab-cate-current.png",
+				"text": "记录"
+			},
+			{
+				"pagePath": "pages/tabbar/user",
+				"iconPath": "static/tabbar/tab-user.png",
+				"selectedIconPath": "static/tabbar/tab-user-current.png",
+				"text": "我的"
+			}
+		]
+	}
+}

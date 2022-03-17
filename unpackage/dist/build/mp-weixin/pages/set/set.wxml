@@ -1,0 +1,1 @@
+<view class="app column data-v-0e8babc5"><view data-event-opts="{{[['tap',[['navTo',['/pages/set/about']]]]]}}" class="cell row b-b data-v-0e8babc5" bindtap="__e"><text class="tit data-v-0e8babc5">关于我们</text><text class="mix-icon icon-you data-v-0e8babc5"></text></view></view>

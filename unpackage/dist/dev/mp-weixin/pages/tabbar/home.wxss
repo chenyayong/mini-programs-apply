@@ -1,0 +1,134 @@
+
+page {
+	background-color: #f7f7f7;
+}
+
+@charset "UTF-8";
+/* 全局主色 */
+/* 金额主色 */
+/* 
+  换皮以下不修改
+ */
+/* 配色 */
+picker.data-v-1edf4007 {
+  width: 100%;
+  height: 100%;
+  text-align: left;
+}
+.van-button.data-v-1edf4007 {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  height: 44px;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.2;
+  text-align: center;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  -webkit-appearance: none;
+}
+.van-button--normal.data-v-1edf4007 {
+  padding: 0 15px;
+  font-size: 14px;
+}
+.van-button.data-v-1edf4007::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  border: inherit;
+  border-color: #000;
+  border-radius: inherit;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  content: ' ';
+}
+.van-button--block.data-v-1edf4007 {
+  display: block;
+  width: 100%;
+}
+.van-button__content.data-v-1edf4007 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.van-button--normal.data-v-1edf4007 {
+  padding: 0 15px;
+  font-size: 14px;
+}
+.van-button--primary.data-v-1edf4007 {
+  color: #fff;
+  background-color: #07c160;
+  border: 1px solid #07c160;
+}
+.van-cell.data-v-1edf4007 {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 16px;
+  overflow: hidden;
+  color: #323233;
+  font-size: 14px;
+  line-height: 24px;
+  background-color: #fff;
+}
+.van-cell.data-v-1edf4007::after {
+  position: absolute;
+  box-sizing: border-box;
+  content: ' ';
+  pointer-events: none;
+  right: 16px;
+  bottom: 0;
+  left: 16px;
+  border-bottom: 1px solid #ebedf0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+.van-cell__title.data-v-1edf4007,
+.van-cell__value.data-v-1edf4007 {
+  flex: 1;
+}
+.van-field__label.data-v-1edf4007 {
+  flex: none;
+  box-sizing: border-box;
+  width: 6.2em;
+  margin-right: 12px;
+  color: #646566;
+  text-align: left;
+  word-wrap: break-word;
+}
+.van-cell__value.data-v-1edf4007 {
+  position: relative;
+  overflow: hidden;
+  color: #969799;
+  text-align: right;
+  vertical-align: middle;
+  word-wrap: break-word;
+}
+.van-field__body.data-v-1edf4007 {
+  display: flex;
+  align-items: center;
+}
+.van-field__control.data-v-1edf4007 {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  color: #323233;
+  line-height: inherit;
+  text-align: left;
+  background-color: transparent;
+  border: 0;
+  resize: none;
+}
+

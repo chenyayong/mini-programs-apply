@@ -1,0 +1,14 @@
+@charset "UTF-8";
+/* 全局主色 */
+/* 金额主色 */
+/* 
+  换皮以下不修改
+ */
+/* 配色 */
+.uni-collapse.data-v-275068f4 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+

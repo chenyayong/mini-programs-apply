@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "申请记录",
+  "usingComponents": {
+    "uni-collapse": "/uni_modules/uni-collapse/components/uni-collapse/uni-collapse",
+    "uni-collapse-item": "/uni_modules/uni-collapse/components/uni-collapse-item/uni-collapse-item",
+    "uni-list": "/uni_modules/uni-list/components/uni-list/uni-list",
+    "uni-list-item": "/uni_modules/uni-list/components/uni-list-item/uni-list-item",
+    "uni-steps": "/uni_modules/uni-steps/components/uni-steps/uni-steps",
+    "mix-empty": "/components/mix-empty/mix-empty"
+  }
+}

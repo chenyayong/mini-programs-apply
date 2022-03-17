@@ -1,0 +1,7 @@
+后台:https://www.xiensw.com/index.php/Admin/Index/index
+账号:admin   
+密码:yanfa9527.
+
+宝塔: http://101.35.89.61:8888/dc7160cc
+账号：adminroot
+密码：82ff9c2b
